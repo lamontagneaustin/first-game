@@ -1,23 +1,27 @@
 package GUI;
 
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Drawing extends Canvas{
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		JFrame frame = new JFrame("Test Frame");
-		Canvas canvas = new Drawing();				
-		canvas.setSize(600, 600);
-        frame.add(canvas);
-        frame.pack();
-        frame.setVisible(true);
+	
+	int i = 0;
+	
+	public Drawing() {
 	}
 
+	@Override
 	public void paint(Graphics g) {
-		g.fillOval(100, 100, 200, 200);
+		g.setColor(Color.BLUE);
+		g.fillOval(100, 100, 200, 200);	
+		
+		if(i > 5) {
+			g.fillRect(0, 0, 100, 100);
+		}  
+		
+		i++;
 	}
 }
