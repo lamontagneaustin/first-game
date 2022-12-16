@@ -37,7 +37,7 @@ public class Drawing extends Canvas{
 	 * 
 	 * @param g : Graphics object passed.
 	 */
-	public void paint(Graphics g) {	
+	public void paint(Graphics g) {
 		
 		// Draw and update octopus each frame per click.
 		if(frame % 2 == 0) {

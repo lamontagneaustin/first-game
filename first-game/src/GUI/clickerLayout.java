@@ -94,7 +94,8 @@ public class clickerLayout implements ActionListener{
 		frame.update(panel.getGraphics());
 		frame.pack();
 		frame.setLocationRelativeTo(null);
-        frame.setMinimumSize(frame.getSize()); 
+        frame.setMinimumSize(frame.getSize());
+        //frame.setAlwaysOnTop (true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);	
 	}
