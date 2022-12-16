@@ -37,17 +37,25 @@ public class clickerLayout implements ActionListener{
 	
 	public clickerLayout() throws IOException{
 		
-		frame = new JFrame("Our GUI");
+		frame = new JFrame("Octopus Game");
 		panel = new JPanel();
 		button = new JButton("Click me");
 		label = new JLabel("Number of clicks: 0");
 		canvas = new Drawing();
 		canvas.setSize(400, 400);
 		
+		/*
 		//String imagePath = "/Users/u1243865/git/first-game/first-game/src/GUI/icon.png";
 		//BufferedImage myPicture = ImageIO.read(new File (imagePath));
 		ImageIcon img = loadIcon("src/image.png");
 		frame.setIconImage(img.getImage());
+		*/
+		BufferedImage img = null;
+		try {
+			img = ImageIO.read(new File("src/octopus1.png"));
+		} catch (IOException e) {
+		}
+		frame.setIconImage(img);
 		
 		button.addActionListener(this);		
 		
@@ -58,15 +66,18 @@ public class clickerLayout implements ActionListener{
 		
 		
 		c = new GridBagConstraints();	
-		c.gridx = 0;
-		c.gridy = 0;
+		c.gridx = 1;
+		c.gridy = 1;
+		c.ipady = 40;
+		c.gridwidth = 2;
 		panel.add(button, c);
 		c.gridx = 1;
 		c.gridy = 0;
+		c.ipady = 0;
 		panel.add(label, c);		
 		c.gridwidth = 3;
 		c.gridx = 0;
-		c.gridy = 1;
+		c.gridy = 2;
 		panel.add(canvas, c);
 		
 		
@@ -94,11 +105,13 @@ public class clickerLayout implements ActionListener{
 		new clickerLayout();
 	}
 	
+	/*
 	public ImageIcon loadIcon(String iconName) throws IOException {
 	    ClassLoader loader = this.getClass().getClassLoader();
 	    BufferedImage icon = ImageIO.read(loader.getResourceAsStream(iconName));
 	    return new ImageIcon(icon);
 	}
+	*/
 	
 	public void actionPerformed(ActionEvent e) {
 		count++;
