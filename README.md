@@ -1,6 +1,3 @@
-## first-game 
-Learning how to make a GUI and game elements.
-
 # First Game: Octopus Clicker
 Author: Austin LaMontagne
 Date: 15 December 2022
