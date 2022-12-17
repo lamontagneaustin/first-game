@@ -2,6 +2,8 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -45,17 +47,22 @@ public class clickerLayout implements ActionListener{
 		// Initialize objects.
 		frame = new JFrame("Octopus Game");
 		panel = new JPanel();
+		panel.setBackground(new Color(210, 210, 210));
 		clickButton = new JButton("Click me");
-		clickButton.addActionListener(this);	
+		clickButton.addActionListener(this);
+		clickButton.setBackground(new Color(190, 190, 190));
+		clickButton.setFont(new Font("Tahoma", Font.BOLD, 12));
+		clickButton.setFocusPainted(false);
 		noClicksLabel = new JLabel("Number of clicks: 0");
 		responseLabel = new JLabel("Octopus Game: Click to win!");
 		canvas = new Drawing();
+		canvas.setBackground(new Color(165, 227, 223));
 		canvas.setSize(400, 400);
 		
 		// Read image and set icon.
 		BufferedImage img = null;
 		try {
-			img = ImageIO.read(new File("src/octopus1.png"));
+			img = ImageIO.read(new File("src/images/octopus1.png"));
 		} catch (IOException e) {
 		}
 		String os = System.getProperty("os.name");
