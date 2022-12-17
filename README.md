@@ -1,4 +1,4 @@
-# Octopus Clicker ![alt text](https://github.com/lamontagneaustin/first-game/blob/main/first-game/src/octopus1.png?raw=true) ![alt text](https://github.com/lamontagneaustin/first-game/blob/main/first-game/src/octopus2.png?raw=true)
+# Octopus Clicker ![alt text](https://github.com/lamontagneaustin/first-game/blob/main/first-game/src/images/octopus1.png?raw=true) ![alt text](https://github.com/lamontagneaustin/first-game/blob/main/first-game/src/images/octopus2.png?raw=true)
 
 Author: Austin LaMontagne <br />
 Date: 15 December 2022 <br />
