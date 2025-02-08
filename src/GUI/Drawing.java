@@ -16,7 +16,6 @@ import javax.imageio.ImageIO;
  * @author Austin LaMontagne
  * @version 1.0, December 15, 2022
  */
-@SuppressWarnings("serial")
 public class Drawing extends Canvas{
 	
 	int frame = 0;
